@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Planetas</string>
+    <string name="name">Nombre</string>
+    <string name="gravity">Gravedad</string>
+    <string name="save">Guardar</string>
+    <string name="action_add">Agregar</string>
+</resources>
