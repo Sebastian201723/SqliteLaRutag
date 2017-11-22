@@ -6,12 +6,16 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_add.*
 
 import unicauca.movil.planetas.databinding.ActivityAddBinding
+import unicauca.movil.planetas.db.AppDB
+import unicauca.movil.planetas.db.PlanetaDao
 import unicauca.movil.planetas.models.Planeta
 import unicauca.movil.planetas.util.text
+import kotlin.concurrent.thread
 
 class AddActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityAddBinding
+    val dao:PlanetaDao = AppDB.db.planetaDao()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +27,12 @@ class AddActivity : AppCompatActivity() {
         val name = name.text()
         val gravity = gravity.text()
         val planeta = Planeta(name, gravity.toFloat())
-        finish()
+
+        thread{
+            dao.insert(planeta)
+            runOnUiThread {
+                finish()
+            }
+        }
     }
 }

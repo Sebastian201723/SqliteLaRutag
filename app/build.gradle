@@ -40,7 +40,16 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     kapt "com.android.databinding:compiler:3.0.0"
     implementation 'com.android.support:design:27.0.0'
+    implementation "android.arch.persistence.room:runtime:1.0.0"
+    kapt "android.arch.persistence.room:compiler:1.0.0"
+    implementation "org.jetbrains.anko:anko-coroutines:0.10.2"
 }
 repositories {
     mavenCentral()
+}
+
+kotlin {
+    experimental {
+        coroutines "enable"
+    }
 }
