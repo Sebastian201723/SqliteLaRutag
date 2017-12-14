@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Planetas</string>
+    <string name="app_name">Destinos</string>
     <string name="name">Nombre</string>
     <string name="gravity">Gravedad</string>
     <string name="save">Guardar</string>

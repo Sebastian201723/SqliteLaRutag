@@ -6,12 +6,12 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import unicauca.movil.planetas.R
 import unicauca.movil.planetas.databinding.TemplatePlanetaBinding
-import unicauca.movil.planetas.models.Planeta
+import unicauca.movil.planetas.models.Destino
 import unicauca.movil.planetas.util.inflate
 
 class PlanetaAdapter : BaseAdapter() {
 
-    var data: List<Planeta> = emptyList()
+    var data: List<Destino> = emptyList()
         set(value) {
             field = value
             notifyDataSetChanged()
@@ -26,7 +26,7 @@ class PlanetaAdapter : BaseAdapter() {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val v: View = convertView ?: parent.inflate(R.layout.template_planeta)
         val binding:TemplatePlanetaBinding = DataBindingUtil.bind(v)
-        binding.planeta = data[position]
+        binding.destino = data[position]
         return binding.root
     }
 

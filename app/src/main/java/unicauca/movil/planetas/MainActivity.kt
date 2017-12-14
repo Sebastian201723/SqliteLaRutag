@@ -11,14 +11,13 @@ import org.jetbrains.anko.startActivity
 import unicauca.movil.planetas.adapters.PlanetaAdapter
 import unicauca.movil.planetas.databinding.ActivityMainBinding
 import unicauca.movil.planetas.db.AppDB
-import unicauca.movil.planetas.db.PlanetaDao
-import kotlin.concurrent.thread
+import unicauca.movil.planetas.db.DestinoDao
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val adapter: PlanetaAdapter = PlanetaAdapter()
-    val dao:PlanetaDao = AppDB.db.planetaDao()
+    val dao: DestinoDao = AppDB.db.destinoDao()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

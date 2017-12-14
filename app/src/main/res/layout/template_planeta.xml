@@ -3,8 +3,8 @@
 
     <data>
         <variable
-            name="planeta"
-            type="unicauca.movil.planetas.models.Planeta"/>
+            name="destino"
+            type="unicauca.movil.planetas.models.Destino"/>
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -18,12 +18,12 @@
             style="@style/Base.TextAppearance.AppCompat.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{planeta.nombre}"
+            android:text="@{destino.nombre}"
             />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text='@{""+planeta.gravedad}'
+            android:text='@{""+destino.gravedad}'
             />
 
     </LinearLayout>
