@@ -25,8 +25,11 @@ class AddActivity : AppCompatActivity() {
 
     fun save() {
         val name = name.text()
-        val gravity = gravity.text()
-        val destino = Destino(name, gravity.toFloat())
+        val precio = precio.text()
+        val visitors = visitors.text()
+        val img = img.text()
+        val sinopsis = sinopsis.text()
+        val destino = Destino(name,  visitors.toFloat(),precio.toFloat(),img, sinopsis)
 
         thread{
             dao.insert(destino)

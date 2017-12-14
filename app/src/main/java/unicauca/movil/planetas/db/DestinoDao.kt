@@ -16,7 +16,7 @@ interface DestinoDao {
     fun delete(destino: Destino)
 
     @Query("SELECT * FROM destino WHERE id = :id")
-    fun planetaById(id:Long): Destino
+    fun destinoById(id:Long): Destino
 
     @Query("SELECT * FROM destino")
     fun all():List<Destino>

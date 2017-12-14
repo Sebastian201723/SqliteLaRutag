@@ -22,12 +22,34 @@
             android:hint="@string/name"
             android:inputType="text" />
 
+
+
         <EditText
-            android:id="@+id/gravity"
+            android:id="@+id/visitors"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/gravity"
+            android:hint="@string/visitors"
             android:inputType="number" />
+
+        <EditText
+            android:id="@+id/precio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/price"
+            android:inputType="text" />
+        <EditText
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/img"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/sinopsis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/sinopsis"
+            android:inputType="text" />
 
         <Button
             android:layout_width="match_parent"

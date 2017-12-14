@@ -29,8 +29,19 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         async(UI){
+            //Usamos bg para ejecutar en background
             adapter.data = bg { dao.all() }.await()
         }
+        /*
+        * Utilizando corutinas:
+        * thread {
+        * val data = dao.all()
+        * runOnUiThread{
+        *   adapter.data = data
+        *   }
+        * }
+        * ara esto debe importarse import kotlinx.coroutines.experimental.android.UI
+        * */
 
     }
 
